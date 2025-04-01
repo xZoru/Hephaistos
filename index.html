@@ -50,21 +50,41 @@
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-chart-line"></i>
+                        <i class="fas fa-hammer"></i>
                     </div>
                     <h3>fix it felix</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore in, quidem, deserunt repudiandae aliquid soluta quis placeat corporis qui commodi, pariatur delectus cumque. Cupiditate quo veritatis labore optio ipsam incidunt!.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-laptop-code"></i>
+                        <i class="fas fa-building"></i>
                     </div>
                     <h3>wreck it ralph</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa nesciunt natus corrupti. Saepe nisi amet voluptas eveniet aliquam sunt alias. Ipsam nihil explicabo nesciunt numquam optio dicta saepe molestiae tempore!.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-bullhorn"></i>
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <h3>wreck it ralph</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa nesciunt natus corrupti. Saepe nisi amet voluptas eveniet aliquam sunt alias. Ipsam nihil explicabo nesciunt numquam optio dicta saepe molestiae tempore!.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>wreck it ralph</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa nesciunt natus corrupti. Saepe nisi amet voluptas eveniet aliquam sunt alias. Ipsam nihil explicabo nesciunt numquam optio dicta saepe molestiae tempore!.</p>
+                </div><div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tractor"></i>
+                    </div>
+                    <h3>wreck it ralph</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa nesciunt natus corrupti. Saepe nisi amet voluptas eveniet aliquam sunt alias. Ipsam nihil explicabo nesciunt numquam optio dicta saepe molestiae tempore!.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-house"></i>
                     </div>
                     <h3>bossing</h3>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi excepturi fugit nam quaerat debitis molestiae illo veniam enim non, similique praesentium quod minus voluptates doloribus ipsum voluptate adipisci voluptatum accusamus?.</p>
@@ -101,42 +121,64 @@
         </div>
     </section>
 
-    <!-- Project Section-->
-    <section class="testimonials" id="projects">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Leaders</h2>
-                <p>kung araw araw ka maraming problema, gabi ka na gumising</p>
-            </div>
-            <div class="projects-grid">
-                <div class="projects-card">
-                    <div class="projects-content">
-                        <p>"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis, repellat? Tempore perferendis laboriosam totam ullam. Consectetur quos reprehenderit maiores at architecto quis laboriosam ratione dolores sit, labore, est deserunt ab?."</p>
-                    </div>
-                    <div class="projects-author">
-                        <img src="imgs/edrick.jpg" alt="Sarah Johnson">
-                        <div>
-                            <h4>Edrick John Baja</h4>
-                            <p>Owner, Founder</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="projects-card">
-                    <div class="projects-content">
-                        <p>"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic, aliquam reprehenderit sequi impedit dolor ea obcaecati ipsa molestiae expedita officiis, fugit voluptatibus? Numquam rem excepturi error porro, iusto dolores eum?."</p>
-                    </div>
-                    <div class="projects-author">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen">
-                        <div>
-                            <h4>Xol Adrian Andres</h4>
-                            <p>saling pusa</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!-- Projects Section -->
+<section class="projects" id="projects">
+    <div class="container">
+        <div class="section-header">
+            <h2>Our Projects</h2>
+            <p>See our recent construction work</p>
         </div>
-    </section>
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card" onclick="openModal(1)">
+                <div class="project-image">
+                    <img src="imgs/ongoing.jpg" alt="Ongoing">
+                    <div class="image-count">Gallery</div>
+                </div>
+                <div class="project-info">
+                    <h3>Ongoing Construction</h3>
+                    <p>Residential/Commercial Construction</p>
+                </div>
+            </div>
+            
+            <!-- Project 2 -->
+            <div class="project-card" onclick="openModal(2)">
+                <div class="project-image">
+                    <img src="imgs/completed.jpg" alt="Completed">
+                    <div class="image-count">Gallery</div>
+                </div>
+                <div class="project-info">
+                    <h3>Completed Projects</h3>
+                    <p>Compilation of completed projects</p>
+                </div>
+            </div>
+            
+            <!-- Add more projects as needed -->
+        </div>
+    </div>
+</section>
 
+<!-- The Modal -->
+<div id="projectModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+        <div class="project-title">
+            <h2 id="modalProjectTitle">Project Title</h2>
+            <p id="modalProjectDesc">Project description</p>
+        </div>
+        
+        <div class="slideshow-container">
+            <!-- Slides will be inserted here by JavaScript -->
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+        <div class="dots-container">
+            <!-- Dots will be inserted here by JavaScript -->
+        </div>
+    </div>
+</div>
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
@@ -198,6 +240,28 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="js.js"></script>
+
+    <!-- The Modal -->
+<div id="projectModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+        <div class="project-title">
+            <h2 id="modalProjectTitle">Project Title</h2>
+            <p id="modalProjectDesc">Project description</p>
+        </div>
+        
+        <div class="slideshow-container">
+            <!-- Slides will be inserted here by JavaScript -->
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+        <div class="dots-container">
+            <!-- Dots will be inserted here by JavaScript -->
+        </div>
+    </div>
+</div>
 </body>
 </html>
