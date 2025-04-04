@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', function() {
             images: [
                 "imgs/CANOPY/canopy1.jpg",
                 "imgs/CANOPY/canopy2.jpg",
-                "imgs/project1-3.jpg"
+                "imgs/CANOPY/canopy3.jpg",
+                "imgs/CANOPY/canopy4.jpg"
             ]
         },
         {
@@ -16,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
             title: "Completed Projects",
             description: "Compilation of completed projects",
             images: [
-                "imgs/completed.jpg"
+                "imgs/FENCE/fence1.jpg"
             ]
         },
         {
@@ -77,12 +78,15 @@ document.addEventListener('DOMContentLoaded', function() {
         // Show first slide
         slideIndex = 1;
         showSlides(slideIndex);
+
+        document.body.classList.add('modal-open');
     };
 
     // Close modal function
     window.closeModal = function() {
         document.getElementById('projectModal').style.display = "none";
         document.body.style.overflow = "auto";
+        document.body.classList.remove('modal-open');
     };
 
     // Navigation functions
