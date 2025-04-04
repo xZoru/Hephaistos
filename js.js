@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
             title: "Ongoing Construction",
             description: "Residential/Commercial Construction",
             images: [
-                "imgs/project1-1.jpg",
-                "imgs/project1-2.jpg",
+                "imgs/CANOPY/canopy1.jpg",
+                "imgs/CANOPY/canopy2.jpg",
                 "imgs/project1-3.jpg"
             ]
         },
@@ -16,13 +16,13 @@ document.addEventListener('DOMContentLoaded', function() {
             title: "Completed Projects",
             description: "Compilation of completed projects",
             images: [
-                "imgs/WCC/WCCcompleted.jpg"
+                "imgs/completed.jpg"
             ]
         },
         {
             id: 3,
             title: "Special Projects",
-            description: "Compilation of completed projects",
+            description: "Custom/Special Projects",
             images: [
                 "imgs/WCC/WCCcompleted.jpg"
             ]
@@ -34,7 +34,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Open modal function
     window.openModal = function(projectId) {
-        console.log("Attempting to open modal for project:", projectId);
         currentProjectId = projectId;
         const project = projects.find(p => p.id === projectId);
         
@@ -45,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const modal = document.getElementById('projectModal');
         modal.style.display = "block";
-        document.body.style.overflow = "hidden"; // Prevent scrolling
+        document.body.style.overflow = "hidden";
         
         document.getElementById('modalProjectTitle').textContent = project.title;
         document.getElementById('modalProjectDesc').textContent = project.description;
@@ -83,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Close modal function
     window.closeModal = function() {
         document.getElementById('projectModal').style.display = "none";
-        document.body.style.overflow = "auto"; // Re-enable scrolling
+        document.body.style.overflow = "auto";
     };
 
     // Navigation functions
@@ -113,8 +112,8 @@ document.addEventListener('DOMContentLoaded', function() {
             dots[i].className = dots[i].className.replace(" active", "");
         }
         
-        slides[slideIndex-1].style.display = "block";
-        dots[slideIndex-1].className += " active";
+        if (slides[slideIndex-1]) slides[slideIndex-1].style.display = "block";
+        if (dots[slideIndex-1]) dots[slideIndex-1].className += " active";
     }
 
     // Close when clicking outside modal

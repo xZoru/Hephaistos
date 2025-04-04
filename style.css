@@ -4,6 +4,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    z-index: auto
 }
 
 :root {
@@ -466,10 +468,17 @@ body {
 }
 
 /* Project Modal */
+
+body.modal-open {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
+
 .modal {
     display: none;
     position: fixed;
-    z-index: auto;
+    z-index: 9999 !important;
     left: 0;
     top: 0;
     width: 100%;
