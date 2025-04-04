@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
             title: "Ongoing Construction",
             description: "Residential/Commercial Construction",
             images: [
-                "imgs/ongoing.jpg",
+                "imgs/project1-1.jpg",
                 "imgs/project1-2.jpg",
                 "imgs/project1-3.jpg"
             ]
@@ -14,6 +14,14 @@ document.addEventListener('DOMContentLoaded', function() {
         {
             id: 2,
             title: "Completed Projects",
+            description: "Compilation of completed projects",
+            images: [
+                "imgs/WCC/WCCcompleted.jpg"
+            ]
+        },
+        {
+            id: 3,
+            title: "Special Projects",
             description: "Compilation of completed projects",
             images: [
                 "imgs/WCC/WCCcompleted.jpg"
